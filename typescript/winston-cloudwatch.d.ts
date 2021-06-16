@@ -1,6 +1,6 @@
 import TransportStream = require("winston-transport");
 
-import { CloudWatch, CloudWatchLogs } from "aws-sdk";
+import { CloudWatchLogsClient, CloudWatchLogsClientConfig } from "@aws-sdk/client-cloudwatch-logs";
 
 import winston = require('winston');
 
@@ -59,7 +59,7 @@ declare namespace WinstonCloudwatch {
     awsAccessKeyId?: string;
     awsSecretKey?: string;
     awsRegion?: string;
-    awsOptions?: CloudWatch.Types.ClientConfiguration;
+    awsOptions?: CloudWatchLogsClientConfig;
     jsonMessage?: boolean;
     messageFormatter?: (logObject: LogObject) => string;
     proxyServer?: string;

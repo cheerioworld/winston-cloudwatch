@@ -1,6 +1,6 @@
 {
-  "name": "winston-cloudwatch",
-  "version": "2.5.2",
+  "name": "@cheerioworld/winston-cloudwatch",
+  "version": "2.5.3",
   "description": "Send logs to Amazon Cloudwatch using Winston.",
   "keywords": [
     "amazon",
@@ -15,16 +15,23 @@
     "coveralls": "coveralls < ./coverage/lcov.info",
     "update-dependencies": "npm-check-updates -ua && npm install"
   },
-  "repository": "https://github.com/lazywithclass/winston-cloudwatch",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazywithclass/winston-cloudwatch.git"
+  },
   "author": "me@lazywithclass.com",
+  "contributors": [
+    "Cheerio World Inc. <opensource@cheerioworld.com> (https://www.cheerioworld.com)"
+  ],
   "license": "MIT",
   "typings": "typescript/winston-cloudwatch.d.ts",
   "peerDependencies": {
     "winston": "^3.0.0"
   },
   "dependencies": {
+    "@aws-sdk/client-cloudwatch-logs": "^3.18.0",
+    "@aws-sdk/node-http-handler": "^3.18.0",
     "async": "^3.1.0",
-    "aws-sdk": "^2.553.0",
     "chalk": "^4.0.0",
     "fast-safe-stringify": "^2.0.7",
     "lodash.assign": "^4.2.0",
@@ -44,5 +51,14 @@
     "npm-check-updates": "^4.1.1",
     "should": "^13.2.3",
     "sinon": "^9.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/lazywithclass/winston-cloudwatch/issues"
+  },
+  "homepage": "https://github.com/lazywithclass/winston-cloudwatch#readme",
+  "directories": {
+    "example": "examples",
+    "lib": "lib",
+    "test": "test"
   }
 }
